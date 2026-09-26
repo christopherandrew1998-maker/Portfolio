@@ -254,6 +254,37 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
   .impact{padding:72px 0}
 }
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* DOMAINS */
+.dom-section{border-top:1px solid var(--line)}
+.dom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dom{background:var(--bg-2);border:1px solid var(--line);border-radius:20px;padding:30px;transition:border-color .25s,transform .25s}
+.dom:hover{border-color:var(--line-2);transform:translateY(-3px)}
+.dom .ico{width:48px;height:48px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 0 20px}
+.dom .ico svg{width:24px;height:24px}
+.dom h3{font-size:18px;font-weight:600;margin:0 0 10px;letter-spacing:-.01em}
+.dom p{margin:0 0 18px;color:var(--muted);font-size:15px}
+.dom .marks{display:flex;flex-wrap:wrap;gap:6px}
+.dom .marks span{font-size:12.5px;color:var(--muted);background:var(--bg-3);border-radius:100px;padding:5px 12px}
+@media (max-width:960px){.dom-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.dom-grid{grid-template-columns:1fr}.dom{padding:24px}}
+
+/* TRANSLATION */
+.translate{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tr-head{display:grid;grid-template-columns:1fr 64px 1fr;gap:20px;padding:0 24px 16px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.tr-head span:last-child{text-align:left}
+.tr-row{display:grid;grid-template-columns:1fr 64px 1fr;gap:20px;align-items:center;padding:20px 24px;border-radius:14px;background:var(--bg);border:1px solid var(--line);margin-bottom:10px}
+.tr-row b{display:block;font-size:15.5px;font-weight:600}
+.tr-row small{display:block;color:var(--faint);font-size:13px;margin-top:4px}
+.tr-arrow{display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.tr-arrow svg{width:22px;height:22px}
+.tr-note{margin:28px 0 0;color:var(--faint);font-size:14px;max-width:70ch}
+@media (max-width:720px){
+  .tr-head{display:none}
+  .tr-row{grid-template-columns:1fr;gap:10px;padding:20px}
+  .tr-arrow{display:none}
+  .tr-row .side::before{content:attr(data-side);display:block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+}
 </style>
 </head>
 <body>
@@ -263,6 +294,7 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
     <a class="brand" href="#top">Christopher <span>S</span></a>
     <div class="links" id="links">
       <a href="#about">About</a>
+      <a href="#domains">Domains</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Work</a>
       <a href="#education">Education</a>
@@ -280,7 +312,7 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
       <div class="rv">
         <p class="hello">Hi, I'm <b>Christopher S</b>, PMP</p>
         <h1>Engineer's mind,<br><em>product's craft.</em></h1>
-        <p class="lede">I turn complex business problems into <b>clear, shippable products</b>. Today I lead product, delivery and analysis for a global enterprise SaaS platform, with roots in engineering, operations and cloud systems.</p>
+        <p class="lede">I turn complex business problems into <b>clear, shippable products</b>. Today I lead product, delivery and analysis for a global enterprise SaaS platform, with roots in engineering, operations and cloud systems. I work as comfortably in <b>ERP, manufacturing and automotive</b> contexts as in software.</p>
         <div class="actions">
           <a class="btn btn-fill" href="#projects">See my work</a>
           <a class="btn btn-line" href="Christopher_S_CV.pdf" target="_blank" rel="noopener">
@@ -321,6 +353,23 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
       <div class="stat rv"><div class="n"><span data-count="30">30</span><sup>+</sup></div><p>Sprints facilitated as Scrum Master</p></div>
       <div class="stat rv"><div class="n"><span data-count="46">46</span></div><p>UAT scenarios led, zero critical defects</p></div>
       <div class="stat rv"><div class="n"><span data-count="10">10</span></div><p>Legacy applications moved to Azure</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="dom-section" id="domains">
+  <div class="wrap">
+    <p class="eyebrow rv">Domains</p>
+    <h2 class="title rv">Equally at home in <em>software and industry</em></h2>
+    <p class="intro rv">An engineering foundation, an operations MBA and enterprise delivery experience let me move between digital products, ERP driven business processes and the manufacturing floor.</p>
+    <div class="dom-grid">
+      <div class="dom rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Enterprise SaaS and VMS</h3><p>Global vendor management and contingent workforce platforms, from requirements through release.</p><div class="marks"><span>Product ownership</span><span>Multi geography</span><span>Compliance</span></div></div>
+      <div class="dom rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h18M8 3v18"/></svg></div><h3>ERP and business systems</h3><p>Hands on SAP work during the MBA, plus live process design across timesheets, payments, payroll, vendor master data and system integrations.</p><div class="marks"><span>SAP</span><span>Procure to pay</span><span>Timesheets and payroll</span><span>SAP Fieldglass</span></div></div>
+      <div class="dom rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17V9l2-4h8l2 4v8"/><circle cx="8" cy="17" r="2"/><circle cx="16" cy="17" r="2"/></svg></div><h3>Automotive and mobility</h3><p>Automotive component manufacturing on the shop floor, an electric vehicle build, and digital platform work for vehicle retail and resale.</p><div class="marks"><span>Vehicle retail</span><span>Data integrations</span><span>Shop floor</span><span>EV build</span></div></div>
+      <div class="dom rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10l5-3v3l5-3v3l5-3v13z"/><path d="M9 20v-4M15 20v-4"/></svg></div><h3>Manufacturing and Industry 4.0</h3><p>Production planning, Kaizen and changeover reduction, plus fleet monitoring and decision support dashboards built on Industry 4.0 tooling.</p><div class="marks"><span>Kaizen</span><span>Lean Six Sigma</span><span>Fleet monitoring</span><span>Dashboards</span></div></div>
+      <div class="dom rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div><h3>Strategy and operations</h3><p>Operations research and optimisation, competitor benchmarking, market research, cost and budget management, and business case work.</p><div class="marks"><span>Optimisation</span><span>Benchmarking</span><span>Cost management</span><span>Business cases</span></div></div>
+      <div class="dom rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div><h3>FinTech and payments</h3><p>Merchant cash advance lending, origination, funding and repayment flows, and regulatory rules translated into product behaviour.</p><div class="marks"><span>Lending</span><span>Payments</span><span>Regulation</span></div></div>
     </div>
   </div>
 </section>
@@ -407,8 +456,10 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
     <p class="intro rv">A cross section of product, engineering and operations work.</p>
     <div class="filters rv" role="group" aria-label="Filter projects">
       <button aria-pressed="true" data-f="all">All</button>
-      <button aria-pressed="false" data-f="product">Product</button>
-      <button aria-pressed="false" data-f="ops">Operations</button>
+      <button aria-pressed="false" data-f="product">Product and digital</button>
+      <button aria-pressed="false" data-f="erp">ERP and systems</button>
+      <button aria-pressed="false" data-f="auto">Automotive</button>
+      <button aria-pressed="false" data-f="ops">Manufacturing and ops</button>
       <button aria-pressed="false" data-f="eng">Engineering</button>
     </div>
     <div class="bento">
@@ -427,11 +478,18 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
         </ul>
       </article>
 
-      <article class="card wide rv" data-c="product">
+      <article class="card wide rv" data-c="auto">
         <p class="cat">Automotive · UK</p>
         <h3>Digital platform for a UK vehicle retailer</h3>
-        <p>Discovery and platform support for a UK automobile seller and reseller: technical, UX and feature analysis, competitor benchmarking, a prioritised roadmap, and stability fixes across vehicle listing, pricing and booking journeys.</p>
-        <div class="chips"><span>Discovery</span><span>Roadmap</span><span>Platform support</span></div>
+        <p>Discovery and platform support for a UK automobile seller and reseller: technical, UX and feature analysis, competitor benchmarking, a prioritised roadmap, and stability fixes across vehicle listing, pricing and booking journeys. Scoped integrations with vehicle auction and marketplace providers so live stock, valuation and pricing data flow into the retailer's own systems.</p>
+        <div class="chips"><span>Discovery</span><span>Roadmap</span><span>Vehicle data integration</span><span>Platform support</span></div>
+      </article>
+
+      <article class="card wide rv" data-c="erp">
+        <p class="cat">ERP and business systems</p>
+        <h3>ERP driven process and integration work</h3>
+        <p>Studied ERP with hands on SAP transactions during the MBA, including raising purchase orders, then applied the same process thinking in live delivery: timesheet, payment and payroll workflows, vendor and supplier master data, approval hierarchies, and integrations linking staffing, HR, vendor management and manufacturing systems.</p>
+        <div class="chips"><span>SAP</span><span>Purchase orders</span><span>Timesheets and payroll</span><span>Master data</span><span>System integration</span></div>
       </article>
 
       <article class="card wide rv" data-c="product">
@@ -473,9 +531,26 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
         <p class="cat">Manufacturing</p>
         <h3>Kaizen at NVH India</h3>
         <p>Planned daily shift production and led a Kaizen initiative that reduced changeover time and improved line side inventory availability.</p>
-        <div class="chips"><span>Lean</span><span>Kaizen</span></div>
+        <div class="chips"><span>Lean</span><span>Kaizen</span><span>Automotive components</span></div>
       </article>
     </div>
+  </div>
+</section>
+
+
+<section class="translate" id="translate">
+  <div class="wrap">
+    <p class="eyebrow rv">Cross sector fluency</p>
+    <h2 class="title rv">One discipline, <em>two languages</em></h2>
+    <p class="intro rv">The measures change between software delivery and the plant floor, but the thinking does not. This is how my work maps across.</p>
+    <div class="tr-head"><span>In software delivery</span><span></span><span>On the plant floor</span></div>
+      <div class="tr-row rv"><div class="side" data-side="Software"><b>Sprint velocity and throughput</b><small>What the team can reliably ship</small></div><div class="tr-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="side" data-side="Industry"><b>Line throughput and takt time</b><small>What the line can reliably produce</small></div></div>
+      <div class="tr-row rv"><div class="side" data-side="Software"><b>Defect leakage and UAT pass rate</b><small>Quality caught before release</small></div><div class="tr-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="side" data-side="Industry"><b>First pass yield and PPM</b><small>Quality caught before dispatch</small></div></div>
+      <div class="tr-row rv"><div class="side" data-side="Software"><b>Cycle time and lead time</b><small>Idea to production</small></div><div class="tr-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="side" data-side="Industry"><b>Changeover and cycle time</b><small>Order to dispatch</small></div></div>
+      <div class="tr-row rv"><div class="side" data-side="Software"><b>Backlog prioritisation</b><small>Sequencing work against value</small></div><div class="tr-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="side" data-side="Industry"><b>Production planning</b><small>Sequencing work against capacity</small></div></div>
+      <div class="tr-row rv"><div class="side" data-side="Software"><b>Process automation, ~20% effort saved</b><small>Removing manual handoffs</small></div><div class="tr-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="side" data-side="Industry"><b>Kaizen and waste elimination</b><small>Removing non value adding steps</small></div></div>
+      <div class="tr-row rv"><div class="side" data-side="Software"><b>Platform uptime and SLAs</b><small>System availability</small></div><div class="tr-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><div class="side" data-side="Industry"><b>OEE and downtime</b><small>Asset availability</small></div></div>
+    <p class="tr-note rv">Lean Six Sigma Black Belt, an operations MBA and a mechanical engineering degree sit behind this, alongside shop floor production planning and Industry 4.0 dashboard work.</p>
   </div>
 </section>
 
@@ -500,7 +575,7 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
       <div>
         <p class="col-h">Degrees</p>
         <div class="ed rv"><h3>MBA, Operations</h3><p class="meta">Indian Institute of Management Kashipur · 2025</p>
-          <div class="badges"><span class="gold">Silver Medallist</span><span>2nd of 250+</span><span>CGPA 8.72</span></div></div>
+          <div class="badges"><span class="gold">Silver Medallist</span><span>2nd of 250+</span><span>CGPA 8.72</span><span>ERP and SAP coursework</span><span>Operations research</span></div></div>
         <div class="ed rv"><h3>B.E., Mechanical Engineering</h3><p class="meta">St. Joseph's College of Engineering, Anna University · 2020</p>
           <div class="badges"><span class="gold">86.10%</span></div></div>
       </div>
@@ -527,8 +602,10 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
     <div class="skill-grid">
       <div class="sk rv"><h3>Product and delivery</h3><div class="cloud"><span>Product discovery</span><span>Roadmapping</span><span>Backlog prioritisation</span><span>BRD and FRD</span><span>User stories</span><span>A/B testing</span><span>UAT</span><span>Gap analysis</span><span>Competitor benchmarking</span><span>Agile and Scrum</span><span>Scrum Master</span><span>Stakeholder management</span></div></div>
       <div class="sk rv"><h3>Tools and platforms</h3><div class="cloud"><span>JIRA</span><span>Confluence</span><span>Azure DevOps</span><span>Microsoft Azure</span><span>REST APIs</span><span>SAP Fieldglass</span><span>Beeline VMS</span><span>Figma</span></div></div>
+      <div class="sk rv"><h3>ERP and business systems</h3><div class="cloud"><span>SAP (hands on coursework)</span><span>Purchase orders</span><span>Procure to pay</span><span>Timesheets and payments</span><span>Payroll workflows</span><span>Vendor and supplier master data</span><span>Approval workflows</span><span>System integration</span></div></div>
+      <div class="sk rv"><h3>Operations and manufacturing</h3><div class="cloud"><span>Lean Six Sigma Black Belt</span><span>Kaizen</span><span>Production planning</span><span>Changeover reduction</span><span>Inventory availability</span><span>Operations research</span><span>Goal programming</span><span>Industry 4.0</span></div></div>
       <div class="sk rv"><h3>Data and analytics</h3><div class="cloud"><span>SQL</span><span>PostgreSQL</span><span>Power BI</span><span>Tableau</span><span>Advanced Excel</span><span>Python</span><span>R</span></div></div>
-      <div class="sk rv"><h3>Domains</h3><div class="cloud"><span>Enterprise SaaS</span><span>VMS and contingent workforce</span><span>Staffing</span><span>Payments</span><span>Lending and FinTech</span><span>Merchant cash advance</span><span>Automotive retail</span><span>Risk and compliance</span></div></div>
+      <div class="sk rv"><h3>Domains</h3><div class="cloud"><span>Enterprise SaaS</span><span>VMS and contingent workforce</span><span>Staffing</span><span>Payments</span><span>Lending and FinTech</span><span>Merchant cash advance</span><span>Automotive retail and resale</span><span>Automotive component manufacturing</span><span>ERP and business systems</span><span>Mining and heavy operations</span><span>Risk and compliance</span></div></div>
     </div>
   </div>
 </section>
@@ -604,7 +681,7 @@ document.documentElement.classList.add('js');
   if('IntersectionObserver' in window){
     var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
       navLinks.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
-    ['about','experience','projects','education','skills'].forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s)});
+    ['about','domains','experience','projects','education','skills'].forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s)});
   }
 
   if(!reduce && 'IntersectionObserver' in window){

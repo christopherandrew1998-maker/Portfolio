@@ -177,6 +177,9 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
 .card p{color:var(--muted);margin:0 0 22px;font-size:15px}
 .card .chips{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px}
 .card .chips span{font-size:12.5px;color:var(--muted);background:var(--bg-3);border-radius:100px;padding:5px 12px}
+.card.feature.ev{background:linear-gradient(135deg,rgba(196,163,242,.10),var(--bg-2) 60%)}
+.ev-link{display:inline-flex;align-items:center;gap:8px;margin-top:26px;align-self:flex-start;font-size:14.5px;font-weight:500;text-decoration:none;color:var(--bg);background:var(--text);padding:11px 20px;border-radius:100px;transition:background .2s}
+.ev-link:hover{background:var(--accent)}
 .feature-list{list-style:none;margin:0;padding:0;display:grid;gap:18px;align-content:center}
 .feature-list li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--muted)}
 .feature-list li svg{flex:0 0 20px;width:20px;height:20px;color:var(--accent);margin-top:2px}
@@ -478,6 +481,22 @@ section{padding:120px 0;scroll-margin-top:var(--nav)}
         </ul>
       </article>
 
+      <article class="card feature ev rv" data-c="auto product">
+        <div>
+          <p class="cat">New · Market case study · India EV</p>
+          <h3>India's e-bus and e-LCV market</h3>
+          <p>Switch led India's e-bus registrations in 2026 but won none of the country's biggest e-bus tender. I asked who is really winning electric commercial vehicles, and what decides the leaderboard by 2030.</p>
+          <div class="chips"><span>Market sizing</span><span>Competitive analysis</span><span>Unit economics</span><span>Strategy</span></div>
+          <a class="ev-link" href="ev-market-case-study.html">Read the case study <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="feature-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Market sizing:</b> built bottom up from Vahan registrations, 23,540 e-CVs split by segment and penetration</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Tender-lag insight:</b> e-bus market share is a lagging indicator of tender wins, so the leaderboard is about to flip</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Payback model:</b> an entry e-LCV repays its premium in about a year at 100 km a day, with no subsidy</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Recommendations:</b> for e-bus makers, e-LCV makers, Switch Mobility and policymakers to 2030</span></li>
+        </ul>
+      </article>
+
       <article class="card wide rv" data-c="auto">
         <p class="cat">Automotive · UK</p>
         <h3>Digital platform for a UK vehicle retailer</h3>
@@ -696,7 +715,7 @@ document.documentElement.classList.add('js');
   fbtns.forEach(function(b){b.addEventListener('click',function(){
     fbtns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
     var f=b.dataset.f;
-    cards.forEach(function(c){c.classList.toggle('hide',f!=='all'&&c.dataset.c!==f)});
+    cards.forEach(function(c){c.classList.toggle('hide',f!=='all'&&(' '+c.dataset.c+' ').indexOf(' '+f+' ')<0)});
   })});
 
   document.getElementById('form').addEventListener('submit',function(ev){
